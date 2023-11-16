@@ -17,7 +17,7 @@ char ** vicedo(char * level_str, char *q)
 	if (!q)
 		q = " ";
 	for (e = 0; level_str[e] != '\0'; e++)
-		if (!isDelim(level_str[e], q) && (isDelim(str[e + 1], q) || ! level_str[e + 1]))
+		if (!isDelim(level_str[e], q) && (isDelim(level_str[e + 1], q) || ! level_str[e + 1]))
 			wordilyshell++;
 
 	if (wordilyshell== 0)
