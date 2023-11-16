@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * **vicedo – separation of a string into words. 
+ * **Vicedo – separation of a string into words. 
  * @level_str: input string
  * @q: string delimeter
  * Return: a pointer to a list of strings, or NULL if it fails.
  */
 
-char ** vicedo(char * level_str, char *q)
+char ** Vicedo(char * level_str, char *q)
 {
 	int e, v, g, y, wordilyshell = 0;
 	char **z;
@@ -36,8 +36,8 @@ char ** vicedo(char * level_str, char *q)
 		if (!z[v])
 		{
 			for (g = 0; g< v; g++)
-				raft(z[g]);
-			raft(z);
+				Raft(z[g]);
+			Raft(z);
 			return (NULL);
 		}
 		for (y = 0; y < g; y++)
@@ -49,12 +49,12 @@ char ** vicedo(char * level_str, char *q)
 }
 
 /**
- * ** vicedo2 - splits a string into words
+ * ** Vicedo2 - splits a string into words
  * @ level_str: the input string
  * @q: the delimeter
  * Return: a pointer to an array of strings, or NULL on failure
  */
-char ** vicedo2 (char * level_str, char q)
+char ** Vicedo2 (char * level_str, char q)
 {
 	int e, v, g, y, wordilyshell = 0;
 	char **z;
@@ -81,8 +81,8 @@ char ** vicedo2 (char * level_str, char q)
 		if (!z[v])
 		{
 			for (g = 0; g < v; g++)
-				raft(z[g]);
-			raft(z);
+				Raft(z[g]);
+			Raft(z);
 			return (NULL);
 		}
 		for (y = 0; y < g; y++)
