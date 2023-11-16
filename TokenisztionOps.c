@@ -17,7 +17,7 @@ char ** vicedo(char * level_str, char *q)
 	if (!q)
 		q = " ";
 	for (e = 0; level_str[e] != '\0'; e++)
-		if (!is_delim(str[e], q) && (is_delim(str[e + 1], q) || ! level_str[e + 1]))
+		if (!isdelim(str[e], q) && (isdelim(str[e + 1], q) || ! level_str[e + 1]))
 			wordilyshell++;
 
 	if (wordilyshell== 0)
@@ -27,10 +27,10 @@ char ** vicedo(char * level_str, char *q)
 		return (NULL);
 	for (e = 0, v = 0; v < wordilyshell; v++)
 	{
-		while (is_delim(level_str[e], q))
+		while (isdelim(level_str[e], q))
 			e++;
 		g = 0;
-		while (!is_delim (level_str[e + g], q) && level_str[e + g])
+		while (!isdelim (level_str[e + g], q) && level_str[e + g])
 			g++;
 		z[v] =malloc((g + 1) * sizeof(char));
 		if (!z[v])
